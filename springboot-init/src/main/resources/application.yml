@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+name: ricky
+
+person:
+  name: ${name}
+  age: 23
+  address:
+    - benjing
+    - shanghai
+
+
+address:
+  - benjing
+  - shanghai
+
+msg1: 'hello \n springboot'
+msg2: "hello \n springboot"
+
