@@ -8,6 +8,7 @@ import com.ricky.domain.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import redis.clients.jedis.Jedis;
@@ -42,8 +43,15 @@ public class SpringbootEnableApplication {
 
         Jedis jedis = context.getBean(Jedis.class);
         System.out.println(jedis);
+        System.out.println("1");
+        System.out.println("2");
 
 
+    }
+
+    @Bean
+    public Jedis jedis(){
+        return  new  Jedis("localhost",6379);
     }
 
 }
